@@ -14,6 +14,11 @@ class MactsController < ApplicationController
         render json: mact, include: :user
     end
 
+    def destroy
+        mact = Mact.find(params[:id])
+        mact.destroy
+    end
+
     private 
 
     def mact_params
