@@ -11,7 +11,7 @@ class MactsController < ApplicationController
 
     def create 
         mact = Mact.create(mact_params)
-        render json: mact
+        render json: mact, include: :user
     end
 
     private 
