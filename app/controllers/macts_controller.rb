@@ -8,4 +8,16 @@ class MactsController < ApplicationController
         mact = Mact.find(params[:id])
         render json: mact, include: :user
     end
+
+    def create 
+        mact = Mact.create(mact_params)
+        render json: mact
+    end
+
+    private 
+
+    def mact_params
+        params.require(:mact).permit(:title, :image, :content,:text_color, :user_id)
+    end
+
 end
