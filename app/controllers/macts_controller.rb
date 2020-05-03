@@ -1,12 +1,12 @@
 class MactsController < ApplicationController
     def index
         macts = Mact.all 
-        render json: macts, include: :user
+        render json: macts, include: [:user, :comments]
     end
 
     def show
         mact = Mact.find(params[:id])
-        render json: mact, include: :user
+        render json: mact, include: [:user, :comments]
     end
 
     def create 
