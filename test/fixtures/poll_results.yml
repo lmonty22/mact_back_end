@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  mact_id: 1
+  user_answer: false
+  correct_answer: false
+  is_user_correct: false
+
+two:
+  user_id: 1
+  mact_id: 1
+  user_answer: false
+  correct_answer: false
+  is_user_correct: false

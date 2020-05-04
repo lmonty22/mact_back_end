@@ -3,12 +3,12 @@ class MactsController < ApplicationController
 
     def index
         macts = Mact.all 
-        render json: macts, include: [:user, :comments]
+        render json: macts, include: [:user, :comments, :poll_results]
     end
 
     def show
         mact = Mact.find(params[:id])
-        render json: mact, include: [:user, :comments]
+        render json: mact, include: [:user, :comments, :poll_results]
     end
 
     def create 
@@ -24,7 +24,7 @@ class MactsController < ApplicationController
     private 
 
     def mact_params
-        params.require(:mact).permit(:title, :image, :content,:text_color, :user_id)
+        params.require(:mact).permit(:title, :image, :content,:text_color, :user_id, :fact_value)
     end
 
 end
