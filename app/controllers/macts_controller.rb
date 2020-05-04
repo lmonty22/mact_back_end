@@ -1,4 +1,6 @@
 class MactsController < ApplicationController
+
+
     def index
         macts = Mact.all 
         render json: macts, include: [:user, :comments]
@@ -11,7 +13,7 @@ class MactsController < ApplicationController
 
     def create 
         mact = Mact.create(mact_params)
-        render json: mact, include: :user
+        render json: mact, include: [:user]
     end
 
     def destroy
