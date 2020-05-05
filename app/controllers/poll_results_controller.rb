@@ -1,7 +1,7 @@
 class PollResultsController < ApplicationController
     def index
         poll_results = PollResult.all 
-        render json: poll_results
+        render json: poll_results, include: :user
     end
 
     def create
