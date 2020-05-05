@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     
     def show
         user = User.find(params[:id])
-        render json: user, include: [:macts, :comments]
+        render json: user, include: [:macts, :comments, :poll_results]
     end
     private 
 
