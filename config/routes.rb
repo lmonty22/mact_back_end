@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :poll_results
+  resources :poll_results, only: [:create, :index]
   # resources :users
   resources :macts, only: [:index, :show, :create, :destroy]
   resources :users, only: [:index, :create, :show]
