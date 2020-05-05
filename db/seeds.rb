@@ -9,6 +9,7 @@
 User.destroy_all
 Mact.destroy_all
 Comment.destroy_all
+PollResult.destroy_all
 
 
 user1 = User.create(username: "deijdev")
