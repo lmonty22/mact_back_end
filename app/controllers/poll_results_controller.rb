@@ -14,5 +14,6 @@ class PollResultsController < ApplicationController
     def poll_params
         params.require(:poll_result).permit(:user_id, :mact_id, :user_answer, :correct_answer, :is_user_correct)
     end
+    
 end
 
